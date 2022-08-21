@@ -1,8 +1,8 @@
-## Locator Application
+# Locator Application
 
-# As a single Command Line Application or as A deployable microservice that can pull from a Remote Repository
+## As a single Command Line Application or as A deployable microservice that can pull from a Remote Repository
 
-# Locator Command Line Interface 
+## Locator Command Line Interface 
 
 Running Class LocatorCLI with 3 arguments 
 Initial Position e.g. 0,0  
@@ -13,7 +13,7 @@ e.g 0,0 NORTH forward,forward,left,forward
 "java.exe"  -cp locator-1.0-SNAPSHOT.jar com.whichassignment.locator.LocatorCLIKt 0,0 NORTH forward,forward
 
 
-# Locator Spring-Boot Application 
+## Locator Spring-Boot Application 
 
 The application can be run as a Spring-boot application that calls to an external Microservice repository or to a local stub repository
 
@@ -22,7 +22,7 @@ The application can be run as a Spring-boot application that calls to an externa
 A URL call to: http://localhost:8080/api/njdrewett@sky.com/locate/0/0/NORTH 
 Will result in 1,1 as the response
 
-# Design
+## Design
 
 The Locator Class implements the location logic
 
