@@ -7,7 +7,7 @@ class PositionTest {
 
     @Test
     fun testPositionConstructor() {
-        var position = Position(0,0)
+        val position = Position(0,0)
 
         assertEquals(0, position.xPosition)
         assertEquals(0, position.yPosition)
