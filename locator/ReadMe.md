@@ -1,6 +1,6 @@
 # Locator Application
 
-## As a single Command Line Application or as a deployable microservice that can pull from a Remote Repository
+Runnable as a single Command Line Application or as a deployable microservice that can pull from a Remote Repository
 ## Locator Command Line Interface 
 
 Running Class LocatorCLI with 3 arguments 
