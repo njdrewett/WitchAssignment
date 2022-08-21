@@ -7,6 +7,7 @@
     <groupId>which-assignment</groupId>
     <artifactId>which-assignment</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
@@ -25,6 +26,7 @@
         </repository>
     </repositories>
     <modules>
+        <module>locator</module>
         <module>tracker-server</module>
     </modules>
 
