@@ -1,10 +1,10 @@
-#Which Assignment
+# Which Assignment
 
-# Consisting of:
+## Consisting of:
     Locator
     Tracker-Server
 
-# Requirement Scope
+## Requirement Scope
 
 "The woman uses a grid system to navigate. She starts facing north at coordinate (0, 0) and uses relative directions to find her way. For example, if she is heading east and turns 'right', she will be facing south. When she moves 'forward', her coordinate is updated based on the direction she is facing."
 
@@ -17,7 +17,7 @@ The forensics API can be accessed from this host and has just two actions: 'dire
 
 The 'directions' action may be called freely and returns the forensics evidence we have gathered. The response body is in JSON format and it should be apparent how to process it.
 
-# High Level Design - Tracker
+## High Level Design - Locator
 
 Receive / Retrieve Directions String
 - Use Proxy Interface to retrieve or test stub the directions
