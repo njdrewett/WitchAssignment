@@ -1,7 +1,7 @@
 #Which Assignment
 
 # Consisting of:
-    Tracker
+    Locator
     Tracker-Server
 
 # Requirement Scope
@@ -20,18 +20,17 @@ The 'directions' action may be called freely and returns the forensics evidence 
 # High Level Design - Tracker
 
 Receive / Retrieve Directions String
-- Use Proxy Interface to retreive or test stub the directions
+- Use Proxy Interface to retrieve or test stub the directions
 
 Validate the directions String
 - Iterate the returned string and return directions
 
-Instantiate the Tracked
+Instantiate the Tracked Object with initial position and Initial orientation
 
 Iterate through the direction Commands
 
 Apply the commands against the tracked
 - Apply the command against the Tracked using the Command Strategy pattern
 
-Reply / Request validation of the final location
-- Use an Adapter to validate the final location.
+Reply the final location
 
