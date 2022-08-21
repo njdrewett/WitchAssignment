@@ -19,18 +19,26 @@ The application can be run as a Spring-boot application that calls to an externa
 
 "java.exe" -jar locator-1.0-SNAPSHOT-exec.jar com.whichassignment.locator.LocatorApplicationKt
 
+A URL call to: http://localhost:8080/api/njdrewett@sky.com/locate/0/0/NORTH 
+Will result in 1,1 as the response
+
 # Design
 
 The Locator Class implements the location logic
 
 Given an initial Position, initial Orientation and list of directions:
+
     Validate the List of Directions,
+
     If valid:
+
         Initialise a TrackedObject with Position and Orientation
+
         Using the Command Design Pattern:
+
             For each String direction, use a CommandFactory to give an execution order to the tracked object based on the Orientation enumeration state
         
-The final Position of the Tracked Object is the final destination
+    The final Position of the Tracked Object is the final destination
 
 ![image ](Design.png)
         
