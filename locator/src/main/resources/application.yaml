@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: locator
+
+server:
+  port: 8080
+
+repository:
+  url: "http://localhost:8090/api/<identifier>/directions"
+  useStub: true
