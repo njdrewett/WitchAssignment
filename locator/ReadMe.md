@@ -1,6 +1,6 @@
-# Locator Application
+## Locator Application
 
-## As a single Command Line Application or as A deployable microservicethat can pull from a Remote Repository
+# As a single Command Line Application or as A deployable microservice that can pull from a Remote Repository
 
 # Locator Command Line Interface 
 
