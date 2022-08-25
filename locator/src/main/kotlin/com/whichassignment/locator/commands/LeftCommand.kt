@@ -11,7 +11,7 @@ class LeftCommand : TrackedEntityCommand {
         // Get orientation
         val orientation = trackedEntity.orientation
 
-        // get new orientation
+        // gTurn Left and Return new orientation
         val newOrientation = orientation.turnLeft(orientation)
 
         trackedEntity.orientation = newOrientation

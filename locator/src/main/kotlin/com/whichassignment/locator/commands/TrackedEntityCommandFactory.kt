@@ -1,5 +1,7 @@
 package com.whichassignment.locator.commands
 
+import com.whichassignment.locator.util.Direction
+
 /**
  * TrackedEntityCommandFactory
  * Return a command based on the given direction command
@@ -7,12 +9,12 @@ package com.whichassignment.locator.commands
 class TrackedEntityCommandFactory {
 
     fun buildCommand(direction: String):TrackedEntityCommand {
-        if("forward".equals(direction)) {
 
+        if(Direction.FORWARD.direction.equals(direction)) {
             return ForwardCommand()
         }
 
-        if("left".equals(direction)) {
+        if(Direction.LEFT.direction.equals(direction)) {
             return LeftCommand()
         }
 

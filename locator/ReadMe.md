@@ -1,6 +1,7 @@
 # Locator Application
 
 Runnable as a single Command Line Application or as a deployable microservice that can pull from a Remote Repository
+
 ## Locator Command Line Interface 
 
 Running Class LocatorCLI with 3 arguments 
@@ -9,7 +10,7 @@ Initial Orientation: NORTH
 Comma separated directions
 e.g 0,0 NORTH forward,forward,left,forward 
 
-"java.exe"  -cp locator-1.0-SNAPSHOT.jar com.whichassignment.locator.LocatorCLIKt 0,0 NORTH forward,forward
+java -cp "kotlin-stdlib-1.7.10.jar;slf4j-api-1.7.32.jar;locator-1.0-SNAPSHOT.jar" com.whichassignment.locator.LocatorCLIKt 0,0 NORTH forward,forward,left,forward
 
 
 ## Locator Spring-Boot Application 
@@ -18,8 +19,18 @@ The application can be run as a Spring-boot application that calls to an externa
 
 "java.exe" -jar locator-1.0-SNAPSHOT-exec.jar com.whichassignment.locator.LocatorApplicationKt
 
+A URL call to: http://localhost:8080/api/locate/1/1/NORTH/forward,forward,left,forward
+Will result in 0,3 as the response
+
 A URL call to: http://localhost:8080/api/njdrewett@sky.com/locate/0/0/NORTH 
 Will result in 1,1 as the response
+
+The Application uses the following properties:
+Points to an external api for retrieving the directions.
+repository:url: "http://localhost:8090/api/<identifier>/directions"
+Uses the internal Stub data
+useStub: true|false
+
 
 ## Design
 

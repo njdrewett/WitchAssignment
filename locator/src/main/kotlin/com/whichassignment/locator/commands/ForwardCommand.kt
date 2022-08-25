@@ -11,7 +11,7 @@ class ForwardCommand : TrackedEntityCommand {
         // Get orientation
         val orientation = trackedEntity.orientation
 
-        // get new position
+        // move Forward and get new position
         val newPosition = orientation.moveForward(trackedEntity.position)
 
         trackedEntity.position = newPosition

@@ -40,4 +40,24 @@ class LocatorControllerImpl(@Autowired val locatorService: LocatorService) : Loc
         return ResponseEntity(response, HttpStatus.OK)
     }
 
+    @GetMapping(path = ["/locate/{xPosition}/{yPosition}/{orientation}/{directions}"])
+    override fun locateFinalDestination(
+        @PathVariable("xPosition") xPosition: Int,
+        @PathVariable("yPosition") yPosition: Int,
+        @PathVariable("orientation") orientation: String,
+        @PathVariable("directions") directions: String) : ResponseEntity<String>{
+
+        log.info("Entering locateFinalDestination: $xPosition $yPosition $orientation $directions")
+
+        val initialPosition = Position(xPosition,yPosition)
+        val orientationObject = Orientation.valueOf(orientation)
+        val directionsSplit = directions.split(",")
+        val response = locatorService.locateFinalDestination(initialPosition, orientationObject, directionsSplit)
+
+        log.info("Exiting locateFinalDestination: $response")
+
+        return ResponseEntity(response, HttpStatus.OK)
+    }
+
+
 }

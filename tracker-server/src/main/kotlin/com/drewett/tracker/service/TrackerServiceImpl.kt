@@ -19,7 +19,7 @@ class TrackerServiceImpl(@Autowired private val scenarioRepositoryFactory: Scena
             if (scenarioSplit.size == 1) {
                 log.error("Scenario not Found: $scenarioId")
             } else {
-                response = scenarioSplit[1];
+                response = scenarioSplit[1]
             }
 
         log.info("Directions Response for $scenarioId : $response")
@@ -35,7 +35,7 @@ class TrackerServiceImpl(@Autowired private val scenarioRepositoryFactory: Scena
         if (scenarioSplit.size == 1) {
             log.error("Scenario not Found: $scenarioId")
         } else {
-            val position = scenarioSplit[0].split(",");
+            val position = scenarioSplit[0].split(",")
 
             val x = position[0]
             val y = position[1]
@@ -53,7 +53,6 @@ class TrackerServiceImpl(@Autowired private val scenarioRepositoryFactory: Scena
     private fun retrieveScenario(scenarioId: String): List<String> {
         val repository = scenarioRepositoryFactory.getScenarioRepository()
         val scenario = repository.retrieveScenarioById(scenarioId)
-
         return scenario.split("#")
     }
 }

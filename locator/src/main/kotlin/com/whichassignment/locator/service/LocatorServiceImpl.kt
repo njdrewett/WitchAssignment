@@ -28,9 +28,22 @@ class LocatorServiceImpl(@Autowired val directionsRepositoryFactory: DirectionsR
 
         val directions = directionsRepository.retrieveDirections(identifier)
 
+        val finalLocation = locateFinalDestination(initialPosition, initialOrientation, directions)
+
+        log.info("Exiting: locateFinalDestination: $finalLocation")
+
+        return finalLocation
+    }
+
+    override fun locateFinalDestination(
+        initialPosition: Position,
+        initialOrientation: Orientation,
+        directions: List<String> ): String {
+        log.info("Entering: locateFinalDestination: $initialPosition $initialOrientation $directions")
+
         val locator = Locator()
 
-        val finalLocation = locator.locateTrackedEntity(initialPosition,initialOrientation, directions)
+        val finalLocation = locator.locateTrackedEntity(initialPosition, initialOrientation, directions)
 
         log.info("Exiting: locateFinalDestination: $finalLocation")
 
