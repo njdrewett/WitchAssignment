@@ -22,7 +22,7 @@ The application can be run as a Spring-boot application that calls to an externa
 A URL call to: http://localhost:8080/api/locate/1/1/NORTH/forward,forward,left,forward
 Will result in 0,3 as the response
 
-A URL call to: http://localhost:8080/api/njdrewett@sky.com/locate/0/0/NORTH 
+A URL call to: http://localhost:8080/api/njdrewett@email.com/locate/0/0/NORTH 
 Will result in 1,1 as the response
 
 The Application uses the following properties:
